@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>钟表效果</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @-webkit-keyframes secondrun {
+            0% {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(540deg);
+                transform: rotate(540deg);
+            }
+        }
+
+        @keyframes secondrun {
+            0% {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(540deg);
+                transform: rotate(540deg);
+            }
+        }
+
+        @-webkit-keyframes minuterun {
+            0% {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(540deg);
+                transform: rotate(540deg);
+            }
+        }
+
+        @keyframes minuterun {
+            0% {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(540deg);
+                transform: rotate(540deg);
+            }
+        }
+
+        div.clock {
+            position: relative;
+            width: 512px;
+            height: 512px;
+            background-image: url(img/clock.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        div.second {
+            position: absolute;
+            left: 247px;
+            top: 180px;
+            width: 16px;
+            height: 278px;
+            background-image: url(img/second.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            -webkit-transform-origin: center 76px;
+            -ms-transform-origin: center 76px;
+            transform-origin: center 76px;
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+            z-index: 3;
+            -webkit-animation: secondrun 60s steps(60, end) infinite;
+            animation: secondrun 60s steps(60, end) infinite;
+        }
+
+        div.minute {
+            position: absolute;
+            -webkit-transform-origin: center 16px;
+            -ms-transform-origin: center 16px;
+            transform-origin: center 16px;
+            left: 238px;
+            top: 240px;
+            width: 32px;
+            height: 218px;
+            background-image: url(img/minute.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+            z-index: 2;
+            -webkit-animation: minuterun 3600s steps(60, end);
+            animation: minuterun 3600s steps(60, end);
+        }
+
+        div.hour {
+            position: absolute;
+            -webkit-transform-origin: center 16px;
+            -ms-transform-origin: center 16px;
+            transform-origin: center 16px;
+            left: 238px;
+            top: 240px;
+            width: 32px;
+            height: 148px;
+            background-image: url(img/hour.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="second"></div>
+        <div class="minute"></div>
+        <div class="hour"></div>
+    </div>
+
+</body>
+
+</html>

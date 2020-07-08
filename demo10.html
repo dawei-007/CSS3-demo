@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>圣杯布局</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css" media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            resize: both;
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .header,
+        .footer,
+        .left,
+        .right {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 20%;
+            -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+            border: 1px solid orange;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .contain {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .center {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">header</div>
+        <div class="contain">
+            <div class="left">left</div>
+            <div class="center">center</div>
+            <div class="right">right</div>
+
+        </div>
+        <div class="footer">
+            footer
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>list demo</title>
+   <link rel="stylesheet" href="">
+   <style type="text/css">
+      .wrapper {
+         position: relative;
+         width: 200px;
+         height: 300px;
+         margin: 0 auto;
+         top: 50%;
+         left: 50%;
+         margin-left: -100px;
+         margin-top: 150px;
+      }
+
+      .content {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         border: 1px solid black;
+         border-radius: 10px;
+      }
+
+      .content h3 {
+         text-align: center;
+      }
+
+      .content a {
+         display: block;
+         list-style: none;
+         color: white;
+         background-color: orange;
+         border: 1px solid orange;
+         border-radius: 10px;
+         text-decoration: none;
+         margin: 5px 0;
+      }
+
+      div span {
+         display: none;
+      }
+
+      .content span:target {
+         display: block;
+         border: 1px solid red;
+         border-radius: 10px;
+         color: red;
+         background-color: black;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="content">
+         <h3>Accordionlist</h3>
+         <a href="#a1">HTML、CSS、JS</a>
+         <span id="a1">基础你总得会吧</span>
+         <a href="#a2">CSS3</a>
+         <span id="a2">动画+特效</span>
+         <a href="#a3">ES6</a>
+         <span id="a3">进阶核心</span>
+         <a href="#a4">VUE</a>
+         <span id="a4">主流框架</span>
+         <a href="#a5">Node</a>
+         <span id="a5">服务器</span>
+      </div>
+   </div>
+
+</body>
+
+</html>
